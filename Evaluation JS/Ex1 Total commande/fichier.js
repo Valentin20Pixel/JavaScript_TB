@@ -5,7 +5,7 @@ var PORT = 0;
 var REM = "";
 var TOT = PU * QTECOM;
 //  je m'occupe de la remise voir si le TOT est dans les bonnes conditions
-if ((TOT > 100) && (TOT < 200)) {
+if ((TOT >= 100) && (TOT <= 200)) {
     REM = "5%";
     TOT = TOT * 0.95;
 } else if (TOT > 200) {
@@ -19,7 +19,7 @@ console.log(TOT)
 // je regarde si TOT est bien inferieur a 500 et que PORT soit bien de minimum 6 
 if (TOT < 500) {
     PORT = TOT * 0.02;
-    if (PORT > 6) {
+    if (PORT < 6) {
         PORT = 6;
     }
 } PAP = TOT + PORT;
