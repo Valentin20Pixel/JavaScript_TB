@@ -11,7 +11,9 @@ if (pr) {
         pr = tab.includes(nom);
         if(nom==null);
         break;
-    } tab.splice(tab.indexOf(nom), 1);
-    tab.push("");
+    } if(pr){
+        tab.splice(tab.indexOf(nom), 1);
+        tab.push("");
+    }
 }
 alert(tab);
