@@ -1,5 +1,6 @@
 var tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane"];
-var nom = prompt("Ecrivez un nom de ce groupe pour le supprimez: \n"+tab);
+var NomM = prompt("Ecrivez un nom de ce groupe pour le supprimez: \n"+tab);
+var nom =  NomM.charAt(0).toUpperCase()+NomM.slice(1);
 var pr = tab.includes(nom);
 console.log(pr);
 if (pr) {
